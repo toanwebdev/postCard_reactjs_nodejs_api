@@ -134,7 +134,7 @@ const PostCardItem = ({ item }: IPostCardItemProps) => {
 			<img
 				className='postCardItem__image'
 				src={item.image}
-				alt={item.userId.toString()}
+				alt={author?.lastName}
 				onClick={handleOpen}
 			/>
 
@@ -185,7 +185,7 @@ const PostCardItem = ({ item }: IPostCardItemProps) => {
 					aria-labelledby='modal-modal-title'
 					aria-describedby='modal-modal-description'
 					className='postCardItem__image__modal'>
-					<img src={item.image} alt={item.userId.toString()} />
+					<img src={item.image} alt={author?.lastName} />
 				</Modal>
 			)}
 

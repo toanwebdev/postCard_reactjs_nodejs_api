@@ -1,0 +1,10 @@
+import express from 'express'
+import userController from '../controllers/userController'
+
+const router = express.Router()
+
+router.get('/', userController.getAllUser)
+router.get('/:id', userController.getUserById)
+router.get('/as/:username', userController.getUserByUsername)
+
+export default router

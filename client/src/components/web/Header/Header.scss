@@ -1,0 +1,44 @@
+$header-bg-color: #ccc;
+
+.header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	background-color: $header-bg-color;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+	&__link {
+		text-decoration: none;
+		color: unset;
+	}
+
+	&__menu__icon {
+		font-size: 20px;
+	}
+
+	&__user {
+		display: flex;
+		align-items: center;
+
+		&__link {
+			text-decoration: none;
+			color: unset;
+		}
+
+		&__logout {
+			font-size: 14px !important;
+		}
+	}
+
+	&__auth {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		&__link {
+			text-decoration: none;
+			color: unset;
+		}
+	}
+}

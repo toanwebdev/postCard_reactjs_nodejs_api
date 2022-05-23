@@ -1,0 +1,61 @@
+.postCardDelModal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__form {
+		min-width: 300px;
+		max-width: 500px;
+		min-height: 200px;
+
+		border-radius: 5px;
+		background-color: #fff;
+		overflow: auto;
+
+		&__title {
+			font-size: 16px;
+			font-weight: 600;
+			padding: 10px 20px;
+			border-bottom: 1px solid #ccc;
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			& i {
+				font-size: 25px;
+				color: black !important;
+			}
+		}
+
+		&__body {
+			margin: 30px;
+			font-size: 16px;
+
+			& span {
+				font-weight: 600;
+			}
+		}
+
+		&__footer {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 10px;
+
+			margin: 50px 10px 10px 10px;
+
+			& > button {
+				text-transform: capitalize !important;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		&__form {
+			min-width: 200px;
+			max-width: 350px;
+			min-height: 200px;
+		}
+	}
+}

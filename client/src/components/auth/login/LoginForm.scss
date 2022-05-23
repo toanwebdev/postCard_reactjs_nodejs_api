@@ -1,0 +1,56 @@
+.loginForm {
+	margin-top: 50px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__form {
+		margin-top: 20px;
+		width: 450px;
+
+		&__link {
+			color: unset;
+			text-decoration: none;
+			font-size: 15px;
+
+			margin-top: 5px;
+			margin-right: 5px;
+			float: right;
+			transition: color 0.2s ease-in-out;
+
+			&:hover {
+				color: #3361f8;
+			}
+		}
+
+		&__btn {
+			margin-top: 20px !important;
+			height: 40px !important;
+		}
+	}
+
+	&__register {
+		font-size: 15px;
+		margin-top: 50px;
+
+		&__link {
+			color: unset;
+			text-decoration: none;
+			font-size: 15px;
+
+			margin-left: 10px;
+			transition: color 0.2s ease-in-out;
+
+			&:hover {
+				color: #3361f8;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		&__form {
+			width: 350px;
+		}
+	}
+}

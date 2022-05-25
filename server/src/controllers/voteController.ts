@@ -2,10 +2,10 @@ import { Vote } from './../entities/Vote'
 import { Request, Response } from 'express'
 
 const voteController = {
-	getVote: async (req: Request, res: Response) => {
+	getVotes: async (req: Request, res: Response) => {
 		try {
 			const { userId, postCardId } = req.params
-			const vote = await Vote.findOne({
+			const votes = await Vote.find({
 				where: [
 					{
 						userId: parseInt(userId),
@@ -14,7 +14,7 @@ const voteController = {
 				],
 			})
 
-			return res.status(200).json(vote)
+			return res.status(200).json(votes)
 		} catch (error) {
 			return res.status(500).json(error)
 		}

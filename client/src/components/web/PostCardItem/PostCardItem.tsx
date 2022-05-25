@@ -41,26 +41,27 @@ const PostCardItem = ({ item }: IPostCardItemProps) => {
 
 	useEffect(() => {
 		if (isAuthenticated) {
-			const getVote = async () => {
-				const vote = await voteApi.getVote({
+			const getVotes = async () => {
+				const votes = await voteApi.getVotes({
 					postCardId: parseInt(item.id as string),
 					userId: parseInt(user?.id as string),
 				})
 
-				if (
-					vote &&
-					vote.postCardId === parseInt(item.id as string) &&
-					vote.userId === parseInt(user?.id as string)
-				) {
-					if (vote.value === 1) {
-						setLike(true)
-					} else {
-						setDislike(true)
+				for (let i = 0; i < votes.length; i++) {
+					if (
+						votes[i].postCardId === parseInt(item.id as string) &&
+						votes[i].userId === parseInt(user?.id as string)
+					) {
+						if (votes[i].value === 1) {
+							setLike(true)
+						} else {
+							setDislike(true)
+						}
 					}
 				}
 			}
 
-			getVote()
+			getVotes()
 		} else {
 			setLike(false)
 			setDislike(false)

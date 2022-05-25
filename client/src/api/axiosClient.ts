@@ -3,7 +3,7 @@ import queryString from 'query-string'
 import JWTManager from '../utils/jwt'
 
 const axiosClient = axios.create({
-	baseURL: process.env.SERVER_URL_API,
+	baseURL: ' https://cryptic-stream-12864.herokuapp.com/v1/api',
 	headers: {
 		'Content-Type': 'application/json',
 	},

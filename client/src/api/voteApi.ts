@@ -2,7 +2,7 @@ import { Vote } from '../interfaces'
 import axiosClient from './axiosClient'
 
 const voteApi = {
-	getVote({ userId, postCardId }: Vote): Promise<Vote> {
+	getVotes({ userId, postCardId }: Vote): Promise<Vote[]> {
 		const url = `/vote/${userId}/${postCardId}`
 		return axiosClient.get(url)
 	},
